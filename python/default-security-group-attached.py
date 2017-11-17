@@ -44,8 +44,8 @@
 
      # Check resource for applicability
      if configuration_item["resourceType"] not in APPLICABLE_RESOURCES:
-         compliance_type = 'NOT_APPLICABLE'
-         annotation = "The rule doesn't apply to resources of type " \
+        compliance_type = 'NOT_APPLICABLE'
+        annotation = "The rule doesn't apply to resources of type " \
                       + configuration_item["resourceType"] + "."
 
      # Iterate over security groups
@@ -83,4 +83,3 @@ def lambda_handler(event, context):
             },
         ],
         ResultToken=event['resultToken'])
-
